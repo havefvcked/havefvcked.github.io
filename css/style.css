@@ -66,7 +66,7 @@
   box-sizing: border-box; }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
@@ -76,7 +76,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -179,7 +179,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 1em; }
 
 pre {
@@ -228,7 +228,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: inherit;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: inherit;
   line-height: inherit; }
 
@@ -4912,7 +4912,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Montserrat', sans-serif !important;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4997,7 +4997,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Montserrat', sans-serif !important;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7930,7 +7930,7 @@ button.bg-dark:focus {
     margin-left: auto !important; } }
 
 .text-monospace {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important; }
+  font-family: 'Montserrat', sans-serif !important; }
 
 .text-justify {
   text-align: justify !important; }
@@ -8191,6 +8191,7 @@ h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.5;
   font-weight: 400;
+  font-family: 'Montserrat', sans-serif !important;
  }
 
 .ftco-section {
@@ -8389,7 +8390,7 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked:after,
 input[type="checkbox"]:after {
   visibility: visible;
-  font-family: 'Ionicons';
+  font-family: 'Montserrat', sans-serif !important;
   display: inline-block;
   color: rgba(0, 0, 0, 0.2);
   line-height: 1;
