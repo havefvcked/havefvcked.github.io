@@ -39,8 +39,9 @@
 }
 
 * {
- font-family: 'Montserrat', sans-serif;;
+ font-family: 'Montserrat', sans-serif !important;
 }
+
 
 .font-small-vst-button {
   font-size: 0.8em !important;
