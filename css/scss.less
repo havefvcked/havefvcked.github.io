@@ -1,0 +1,175 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+
+$anim-duration: 5; // in seconds
+$anim-speed: 0.65; // in seconds
+
+:root {
+  --btn-border: 1px solid rgba(255, 255, 255, 0.2);
+  --btn-bg: transparent; // #333
+  --btn-shadow: 1px 1px 25px 10px rgba(255, 255, 255, 0.5);
+  --btn-text-color: #f4f4f4;
+
+  --shine-degree: 120deg;
+  --shine-color: rgba(255, 255, 255, 0.2);
+  --shine-effect: linear-gradient(
+    var(--shine-degree),
+    transparent,
+    var(--shine-color),
+    transparent
+  );
+  --shine-transition: all #{$anim-speed}s ease-in-out;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden; // debug
+
+  // last element should not have margin
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  font-size: 1.1rem;
+  padding: 1rem 3rem;
+
+  border-radius: 4px;
+  text-decoration: none;
+  border: var(--btn-border);
+  color: var(--btn-text-color);
+  background: var(--btn-bg);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--shine-effect);
+  }
+}
+
+.btn-hover {
+  &::before {
+    left: -100%;
+    transition: var(--shine-transition);
+  }
+
+  &:hover {
+    box-shadow: var(--btn-shadow);
+
+    &::before {
+      left: 100%;
+    }
+  }
+}
+
+.btn-anim {
+  &::before {
+    animation: shine #{$anim-duration}s ease-in-out infinite;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+    transition-property: left;
+  }
+  #{($anim-speed / ($anim-duration + $anim-speed) * 100%)},
+  100% {
+    left: 100%;
+    transition-property: left;
+  }
+}
+
+.btn-alt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 60px;
+  font-size: 1.1rem;
+
+  position: relative;
+  overflow: hidden; // debug
+
+  // last element should not have margin
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  border-radius: 4px;
+  text-decoration: none;
+  border: var(--btn-border);
+  color: var(--btn-text-color);
+  background: var(--btn-bg);
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+  }
+  &:before {
+    background: rgba(255, 255, 255, 0.5);
+    width: 60px;
+    left: 0;
+    filter: blur(30px);
+    animation: shine-alt1 #{$anim-duration}s ease-in-out infinite;
+  }
+  &:after {
+    background: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    left: 30px;
+    filter: blur(5px);
+    animation: shine-alt2 #{$anim-duration}s ease-in-out infinite;
+  }
+}
+
+@keyframes shine-alt1 {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-100px) skewX(-15deg);
+    transition-property: opacity, transform;
+  }
+  #{($anim-speed / ($anim-duration + $anim-speed) * 100%)},
+  100% {
+    opacity: 0.6;
+    transform: translateX(300px) skewX(-15deg);
+    transition-property: opacity, transform;
+  }
+}
+
+@keyframes shine-alt2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) skewX(-15deg);
+    transition-property: opacity, transform;
+  }
+  #{($anim-speed / ($anim-duration + $anim-speed) * 100%)},
+  100% {
+    opacity: 1;
+    transform: translateX(300px) skewX(-15deg);
+    transition-property: opacity, transform;
+  }
+}
+
+// reset
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// body styling
+body {
+  background: #111;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+}
