@@ -8515,3 +8515,13 @@ input[type="radio"]:checked + label:after {
 p {
   font-weight: 300;
 }
+
+.bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.rules-color {
+  color: grey;
+  font-size: 0.85em
+}
